@@ -13,9 +13,10 @@ produces, in the output directory:
   contradict the present.
 
 The analysis is deterministic and local. Nothing leaves the machine
-unless --push is given, which imports the current (non-superseded)
-memories into a Memline account via its API (verbatim adds, original
-timestamps preserved in metadata) using MEMLINE_API_KEY.
+unless --push is given, which imports every cleaned memory into a
+Memline account via its API (verbatim adds, original validity windows
+preserved, superseded rows imported as closed history) using
+MEMLINE_API_KEY.
 """
 import argparse
 import json
@@ -280,20 +281,32 @@ def render_report(rep: dict, stale_days: int, label: str = "") -> str:
 
 
 def push(cleaned: list[dict], base_url: str) -> int:
+    """Import cleaned memories, including superseded history rows.
+
+    Order by valid_from so earlier values land before later ones. Superseded
+    rows carry their closed validity window; current rows stay open.
+    """
     import urllib.request
     key = os.environ.get("MEMLINE_API_KEY", "")
     if not key:
         raise SystemExit("--push needs MEMLINE_API_KEY in the environment.")
     sent = 0
-    for mem in cleaned:
-        if mem["migration"] == "superseded":
-            continue
-        payload = json.dumps({
+    ordered = sorted(
+        cleaned,
+        key=lambda m: (m.get("user_id") or "", m.get("valid_from") or "", m.get("body") or ""),
+    )
+    for mem in ordered:
+        body = {
             "text": mem["body"], "user_id": mem["user_id"], "infer": False,
             "metadata": {"migrated_from": "mem0-export",
                          "original_valid_from": mem["valid_from"],
                          "migration_status": mem["migration"]},
-        }).encode()
+        }
+        if mem.get("valid_from"):
+            body["valid_from"] = mem["valid_from"]
+        if mem.get("valid_to"):
+            body["valid_to"] = mem["valid_to"]
+        payload = json.dumps(body).encode()
         req = urllib.request.Request(base_url.rstrip("/") + "/v1/memories", data=payload,
                                      headers={"Authorization": f"Bearer {key}",
                                               "Content-Type": "application/json"})
@@ -328,7 +341,7 @@ def main() -> None:
     print(f"report: {args.out}/report.md   cleaned: {args.out}/cleaned.json")
     if args.push:
         sent = push(rep["cleaned"], args.push)
-        print(f"pushed {sent} current memories to {args.push}")
+        print(f"pushed {sent} memories (including superseded history) to {args.push}")
 
 
 if __name__ == "__main__":

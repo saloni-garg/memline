@@ -35,6 +35,11 @@ class AddIn(BaseModel):
     run_id: str = ""
     metadata: dict = {}
     infer: bool = True
+    # Migration import: optional closed validity window. When valid_to is set
+    # the memory stays active so as-of search can still see it inside the
+    # window, while present search excludes it (same as invalidate).
+    valid_from: str | None = None
+    valid_to: str | None = None
 
 
 class SearchIn(BaseModel):
@@ -173,15 +178,17 @@ def add_memories(payload: AddIn, user: dict = Depends(user_for_api_key)):
                              "SUPERSEDE" if event == "UPDATE" else "REVISION",
                              old["body"], cand["body"])
                 supersedes = old["id"]
+            vf = payload.valid_from or now()
+            vt = payload.valid_to  # may be None (still current)
             cur = conn.execute(
                 "INSERT INTO memories(user_id, kind, title, body, project, source, source_quote,"
                 " status, confidence, support_count, ext_user_id, agent_id, app_id, run_id,"
-                " metadata, valid_from, supersedes_id, grounding, created_at, updated_at)"
-                " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                " metadata, valid_from, valid_to, supersedes_id, grounding, created_at, updated_at)"
+                " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                 (user["id"], cand["kind"], cand["title"], cand["body"], cand.get("project", ""),
                  "api", cand.get("source_quote", ""), "active", cand.get("confidence", 1.0),
                  int(cand.get("support", 1)), ext_user, agent_id, app_id, run_id,
-                 json.dumps(payload.metadata or {}), now(), supersedes, grounding, now(), now()))
+                 json.dumps(payload.metadata or {}), vf, vt, supersedes, grounding, vf, now()))
             if supersedes:
                 conn.execute("UPDATE memories SET replaced_by = ? WHERE id = ?",
                              (cur.lastrowid, supersedes))
@@ -189,6 +196,10 @@ def add_memories(payload: AddIn, user: dict = Depends(user_for_api_key)):
             index_memory(conn, row)
             index_graph(conn, row)
             record_event(conn, row["id"], user["id"], event, "", row["body"])
+            if vt:
+                # Closed on import (migration): same history shape as invalidate,
+                # so the history endpoint shows the window was closed.
+                record_event(conn, row["id"], user["id"], "INVALIDATE", row["body"], "")
             result = _serialize(row)
             result["event"] = event
             result["verdict"] = "stored"

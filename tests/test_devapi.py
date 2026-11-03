@@ -1,5 +1,6 @@
 """Developer platform (/v1) tests: Mem0-parity surface plus the parts
 Mem0 does not have (temporal validity, history, profile, graph)."""
+import json
 import os
 import sys
 
@@ -269,3 +270,85 @@ def test_v1_graph_from_people_and_projects():
     g = c.get("/v1/graph", headers={"Authorization": f"Bearer {key}"}).json()
     assert any(n["name"] == "Dana" and n["kind"] == "person" for n in g["nodes"])
     assert any(e["dst_name"] == "Dana" and e["relation"] == "works_with" for e in g["edges"])
+
+
+def test_v1_migration_import_keeps_superseded_as_of_history():
+    """--push must import closed validity windows, not drop superseded rows."""
+    h = _account("migrate-push@example.com")
+    c = TestClient(app)
+    portland = c.post("/v1/memories", headers=h, json={
+        "text": "User lives in Portland.", "user_id": "user-42", "infer": False,
+        "valid_from": "2025-03-04T12:00:00Z", "valid_to": "2025-11-18T12:00:00Z",
+        "metadata": {"migration_status": "superseded"},
+    })
+    assert portland.status_code == 200
+    austin = c.post("/v1/memories", headers=h, json={
+        "text": "User moved to Austin.", "user_id": "user-42", "infer": False,
+        "valid_from": "2025-11-18T12:00:00Z", "valid_to": "2026-06-22T12:00:00Z",
+        "metadata": {"migration_status": "superseded"},
+    })
+    assert austin.status_code == 200
+    denver = c.post("/v1/memories", headers=h, json={
+        "text": "User lives in Denver.", "user_id": "user-42", "infer": False,
+        "valid_from": "2026-06-22T12:00:00Z",
+        "metadata": {"migration_status": "current"},
+    })
+    assert denver.status_code == 200
+    present = c.post("/v1/memories/search", headers=h, json={
+        "query": "where does the user live", "user_id": "user-42",
+        "threshold": 0.05}).json()["results"]
+    assert present and any("Denver" in r["memory"] for r in present)
+    assert all("Portland" not in r["memory"] and "Austin" not in r["memory"] for r in present)
+    in_portland = c.post("/v1/memories/search", headers=h, json={
+        "query": "where does the user live", "user_id": "user-42",
+        "as_of": "2025-06-01T00:00:00Z", "threshold": 0.05}).json()["results"]
+    assert any("Portland" in r["memory"] for r in in_portland)
+    in_austin = c.post("/v1/memories/search", headers=h, json={
+        "query": "where does the user live", "user_id": "user-42",
+        "as_of": "2026-01-15T00:00:00Z", "threshold": 0.05}).json()["results"]
+    assert any("Austin" in r["memory"] for r in in_austin)
+    pid = portland.json()["results"][0]["id"]
+    events = [e["event"] for e in c.get(f"/v1/memories/{pid}/history", headers=h).json()["history"]]
+    assert events == ["ADD", "INVALIDATE"]
+
+
+def test_migrate_push_sends_superseded_rows(monkeypatch):
+    import importlib.util
+    import urllib.request
+
+    migrate_path = os.path.join(os.path.dirname(__file__), "..", "scripts", "migrate.py")
+    spec = importlib.util.spec_from_file_location("migrate_script", migrate_path)
+    migrate = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(migrate)
+
+    sent = []
+
+    class FakeResp:
+        status = 200
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+    def fake_urlopen(req):
+        sent.append(json.loads(req.data.decode()))
+        return FakeResp()
+
+    monkeypatch.setenv("MEMLINE_API_KEY", "ml_test")
+    monkeypatch.setattr(urllib.request, "urlopen", fake_urlopen)
+    cleaned = [
+        {"user_id": "u", "body": "User lives in Denver.", "valid_from": "2026-06-22T12:00:00Z",
+         "valid_to": None, "migration": "current"},
+        {"user_id": "u", "body": "User lives in Portland.", "valid_from": "2025-03-04T12:00:00Z",
+         "valid_to": "2025-11-18T12:00:00Z", "migration": "superseded"},
+    ]
+    n = migrate.push(cleaned, "http://example.test")
+    assert n == 2
+    assert len(sent) == 2
+    assert sent[0]["text"] == "User lives in Portland."
+    assert sent[0]["valid_to"] == "2025-11-18T12:00:00Z"
+    assert "valid_to" not in sent[1]
+    assert sent[1]["text"] == "User lives in Denver."
