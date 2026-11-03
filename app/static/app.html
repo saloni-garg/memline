@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Memline understands about you: Memline</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="logo">Mind<span>Carry</span></div>
+    <div class="row">
+      <span id="who" class="sub" style="margin:0"></span>
+      <span id="planbadge" class="badge"></span>
+      <button class="btn small" id="upgradeBtn" onclick="upgrade()">Go Pro, $19/mo</button>
+      <button class="btn ghost small" onclick="logout()">Sign out</button>
+    </div>
+  </header>
+
+  <div id="usagebar" class="notice hidden"></div>
+  <div id="coverage" class="notice hidden"></div>
+  <div id="err" class="error hidden"></div>
+
+  <nav class="tabs">
+    <button class="tab active" data-view="memory" onclick="show('memory')">What it knows</button>
+    <button class="tab" data-view="inbox" onclick="show('inbox')">Inbox <span id="inboxcount" class="badge"></span></button>
+    <button class="tab" data-view="add" onclick="show('add')">Teach it</button>
+    <button class="tab" data-view="use" onclick="show('use')">Use anywhere</button>
+    <button class="tab" data-view="settings" onclick="show('settings')">Settings</button>
+  </nav>
+
+  <section id="view-memory">
+    <div class="spread">
+      <h2 class="section" style="margin-top:6px">Everything Memline understands about you</h2>
+      <input id="search" placeholder="Search what it knows" style="max-width:260px" oninput="loadMemories()">
+    </div>
+    <p class="sub">This is the whole of it, including the gaps it has flagged. Nothing hidden. Edit or archive anything.</p>
+    <div id="memlist"></div>
+  </section>
+
+  <section id="view-inbox" class="hidden">
+    <h2 class="section" style="margin-top:6px">Inbox: approve what it gets to keep</h2>
+    <p class="sub">Memline worked these out from what you gave it. Each one shows its evidence, and the open questions show what it still does not understand. Nothing is kept without your say-so.</p>
+    <div id="inboxlist"></div>
+  </section>
+
+  <section id="view-add" class="hidden">
+    <div class="grid2">
+      <div class="card">
+        <h3>Quick add</h3>
+        <p>Type one thing an assistant should always know about you.</p>
+        <input id="qa-title" placeholder="Short label, e.g. Writing style">
+        <textarea id="qa-body" placeholder="e.g. I prefer short, direct drafts with no corporate filler."></textarea>
+        <div class="row">
+          <select id="qa-kind" style="max-width:170px">
+            <option value="fact">Fact</option><option value="identity">About me</option>
+            <option value="preference">Preference</option><option value="instruction">Instruction</option>
+            <option value="project">Project</option><option value="person">Person</option>
+          </select>
+          <input id="qa-project" placeholder="Project (optional)" style="max-width:170px">
+          <button class="btn" onclick="quickAdd()">Save</button>
+        </div>
+        <div id="qa-msg" class="sub"></div>
+      </div>
+      <div class="card">
+        <h3>Paste a conversation or notes</h3>
+        <p>Paste anything: a chat with an assistant, your bio, meeting notes. Memline works out the lasting understandings and puts them in your inbox.</p>
+        <textarea id="paste-text" placeholder="Paste text here" style="min-height:130px"></textarea>
+        <button class="btn" onclick="extractPaste()">Find understandings in this</button>
+        <div id="paste-msg" class="sub"></div>
+      </div>
+      <div class="card">
+        <h3>Import from ChatGPT or Claude</h3>
+        <p>Upload your data export (.zip or .json). We read your side of the conversations only, work out what your history says about you, and every understanding waits in your inbox for your approval. Your file is processed and not kept.</p>
+        <input id="import-file" type="file" accept=".zip,.json,.txt">
+        <button class="btn" onclick="importFile()">Import</button>
+        <div id="import-msg" class="sub"></div>
+      </div>
+      <div class="card">
+        <h3>The 2-minute starter</h3>
+        <p>New here? Answer what you can. These six answers become the core of what Memline understands about you.</p>
+        <input id="st-name_role" placeholder="Who are you? Name and what you do">
+        <input id="st-work" placeholder="Where do you work, or what do you run?">
+        <input id="st-projects" placeholder="What are you working on right now?">
+        <input id="st-preferences" placeholder="How do you like assistants to work for you?">
+        <input id="st-tools_style" placeholder="Tools you use, formats you like">
+        <input id="st-people" placeholder="People an assistant should know about">
+        <button class="btn" onclick="starter()">Build my starter understanding</button>
+        <div id="st-msg" class="sub"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="view-use" class="hidden">
+    <h2 class="section" style="margin-top:6px">Use it anywhere</h2>
+    <p class="sub">Pick the assistant you are opening next. Memline assembles your context, including what it does not know yet, in the shape that tool likes best. Copy, paste, done: no re-briefing.</p>
+    <div class="card">
+      <div class="row">
+        <select id="pack-target" style="max-width:220px">
+          <option value="chatgpt">ChatGPT</option>
+          <option value="claude">Claude</option>
+          <option value="gemini">Gemini</option>
+          <option value="cursor">Cursor</option>
+          <option value="plain">Any assistant (plain)</option>
+        </select>
+        <input id="pack-project" placeholder="Project focus (optional)" style="max-width:220px">
+        <button class="btn" onclick="makePack()">Assemble context</button>
+        <button class="btn secondary hidden" id="copyBtn" onclick="copyPack()">Copy context</button>
+      </div>
+      <pre class="pack hidden" id="packout"></pre>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3>Or connect Claude and Cursor directly (MCP)</h3>
+      <p>With the live connection, those tools read what Memline understands about you themselves, and can propose new understandings to your inbox as you work. Create an API key in Settings, then either use the hosted connection (server URL shown with your key) or run the local server with this configuration:</p>
+      <pre class="pack">{
+  "mcpServers": {
+    "memline": {
+      "command": "python",
+      "args": ["-m", "app.mcp_server"],
+      "env": { "MEMLINE_DB": "memline.db", "MEMLINE_USER": "you@example.com" }
+    }
+  }
+}</pre>
+      <p>Tools available to your assistants: recall_memory, propose_memory (lands in your inbox, never straight into what is kept), and forget_memory.</p>
+    </div>
+  </section>
+
+  <section id="view-settings" class="hidden">
+    <h2 class="section" style="margin-top:6px">Settings</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>Assistant API keys</h3>
+        <p>Give an assistant live access with a key. Assistants can read your approved understandings and propose new ones for your inbox. They can never store anything without your approval. Revoke a key at any time to cut access off.</p>
+        <div class="row">
+          <input id="key-name" placeholder="Key name, e.g. My Claude" style="max-width:220px">
+          <button class="btn" onclick="createKey()">Create API key</button>
+        </div>
+        <div id="newkey" class="hidden">
+          <p><strong>Copy this key now.</strong> For safety it is shown only once:</p>
+          <pre class="pack" id="newkey-value"></pre>
+          <p>Hosted connection for MCP clients that support remote servers:</p>
+          <pre class="pack" id="newkey-config"></pre>
+        </div>
+        <div id="keylist" style="margin-top:10px"></div>
+      </div>
+      <div class="card">
+        <h3>Your data</h3>
+        <p>Download everything Memline holds about you: all understandings (including archived), your inbox, and the context you have assembled.</p>
+        <button class="btn secondary" onclick="exportData()">Export my data (JSON)</button>
+        <h3 style="margin-top:22px">Delete account</h3>
+        <p>This erases your account, every understanding, every assembled context and every API key. It cannot be undone.</p>
+        <input id="delete-password" type="password" placeholder="Your password to confirm">
+        <button class="btn danger" onclick="deleteAccount()">Delete my account and all my data</button>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:14px"><a href="/terms">Terms of service</a> · <a href="/privacy">Privacy policy</a></p>
+  </section>
+
+  <footer>Memline. Every AI already understands you. <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a></footer>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

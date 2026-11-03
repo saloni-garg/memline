@@ -1,0 +1,18 @@
+services:
+  memline:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - memline_data:/data
+    environment:
+      # Optional: enables the understanding engine (extraction).
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY:-}"
+      # Optional: neural embeddings via any OpenAI-compatible endpoint.
+      EMBEDDING_API_KEY: "${EMBEDDING_API_KEY:-}"
+      EMBEDDING_BASE_URL: "${EMBEDDING_BASE_URL:-}"
+      EMBEDDING_MODEL: "${EMBEDDING_MODEL:-}"
+    restart: unless-stopped
+
+volumes:
+  memline_data:

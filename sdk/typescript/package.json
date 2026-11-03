@@ -1,0 +1,23 @@
+{
+  "description": "TypeScript client for Memline: trustworthy, time-aware memory for AI applications.",
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./src/index.ts"
+    }
+  },
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "name": "memline",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "smoke": "node smoke.ts"
+  },
+  "type": "module",
+  "types": "src/index.ts",
+  "version": "0.1.0"
+}

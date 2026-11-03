@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memline Developer API: memory and understanding for AI apps</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <div class="logo">Mind<span>Carry</span></div>
+    <nav class="row">
+      <a href="/">Home</a>
+      <a href="/app">Open the app</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">For developers</div>
+    <h1>Trustworthy memory for AI.</h1>
+    <p>Time-aware user understanding, with guarantees. A developer API shaped like Mem0's, so switching is a base URL and a key. What changes: typed understanding instead of bare facts, temporal validity instead of silent overwrites, and evidence on every memory.</p>
+    <p style="margin-top:12px"><strong>Every stored understanding is:</strong> Grounded · Explainable · Time-aware · Auditable · Revisable</p>
+  </section>
+
+  <h2 class="section">The write gate, and Memory Integrity</h2>
+  <p class="sub">Most memory APIs answer every write with 200 OK and a shrug. Here, extraction passes a gate first: evidence is verified against the source conversation, ungrounded candidates come back rejected with a reason, duplicates never re-enter storage, and a restated fact revises the old one instead of contradicting it. <strong>POST /v1/remember</strong> returns a verdict per candidate. <strong>GET /v1/memory_health</strong> reports the health of the store itself: grounded percentage, stale count, contradictions, superseded count, unknowns, gate pass rate and coverage. Memory quality you can see, not trust.</p>
+
+  <h2 class="section">Start in two calls</h2>
+  <div class="card"><pre style="white-space:pre-wrap;font-size:13px">curl -X POST https://mindcarry.fly.dev/v1/memories \
+  -H "Authorization: Bearer ml_YOUR_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"messages": [{"role": "user", "content": "I am training for a marathon."}],
+       "user_id": "user-42"}'
+
+curl -X POST https://mindcarry.fly.dev/v1/memories/search \
+  -H "Authorization: Bearer ml_YOUR_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"query": "what is she training for", "user_id": "user-42"}'</pre>
+  <p style="margin-top:10px">Get a key in the app's Settings tab. Keys are stored hashed and shown once.</p></div>
+
+  <h2 class="section">Endpoints</h2>
+  <section class="steps">
+    <div class="card"><h3>Add and search</h3><p><strong>POST /v1/memories</strong> extracts typed understandings from messages or text (or stores verbatim with <em>infer: false</em>). <strong>POST /v1/memories/search</strong> runs hybrid search and returns the score components for every result, not a black box number.</p></div>
+    <div class="card"><h3>Manage</h3><p><strong>GET / PUT / DELETE /v1/memories/{id}</strong>, list and bulk delete by scope. Scoped by user_id, agent_id, app_id and run_id, the same shape as Mem0.</p></div>
+    <div class="card"><h3>History</h3><p><strong>GET /v1/memories/{id}/history</strong>: every ADD, UPDATE, SUPERSEDE, INVALIDATE and DELETE, readable even after the memory itself is deleted.</p></div>
+  </section>
+  <section class="steps">
+    <div class="card"><h3>Temporal validity</h3><p>Every memory has a validity window. <strong>POST /v1/memories/{id}/invalidate</strong> closes it: present-day search stops returning the memory, and <em>as_of</em> search still answers for the past. Facts stop being true here without being erased.</p></div>
+    <div class="card"><h3>Reasoning over relationships</h3><p><strong>GET /v1/graph</strong>: nobody wants a graph; they want the assistant to know that Project Pluto is part of Firefly, and that Dana leads it. Relationships (works with, works on, part of) are derived from the user's memories and boost retrieval: ask about Firefly, and Pluto's context comes with it.</p></div>
+    <div class="card"><h3>Understanding</h3><p><strong>GET /v1/understanding</strong>: the whole understanding for an end user, grouped by kind, including what is not understood yet. The endpoint a fact store cannot offer. (/v1/profile remains as an alias.)</p></div>
+  </section>
+
+  <h2 class="section">One call: assemble_context</h2>
+  <p class="sub">Do not rebuild the planner. Send the task; get back context that is ready to paste into a prompt.</p>
+  <div class="card"><pre style="white-space:pre-wrap;font-size:13px">POST /v1/assemble_context
+{"query": "help her rehearse for the promotion conversation",
+ "user_id": "user-42", "max_tokens": 1500}</pre>
+  <p style="margin-top:10px">Returns the assembled context, the supporting understandings behind it, anything omitted by the token budget (with the reason), the unknowns the assistant must not guess at, and a confidence summary for the included set.</p></div>
+
+  <h2 class="section">Why switch</h2>
+  <p class="sub">The claim, stated as narrowly as the evidence allows: understanding is a better intermediate representation than atomic facts for tasks that require reasoning over goals, identity, principles, writing style and longitudinal behavior, while remaining competitive on factual recall. Across our current evaluations the same ordering keeps appearing: understanding, then raw conversation history, then atomic facts.</p>
+  <p class="sub">On our initial smoke benchmark (small and synthetic, recorded extraction outputs, method and limits published in the repo at eval/RESULTS.md), three stores over the same history through the same retrieval answered: raw RAG 8 of 13, a Mem0-style fact store 6 of 13, the understanding store 12 of 13, with facts at parity and the gap concentrated in goals, principles, style and identity. A smoke signal, not a victory claim. The live-extraction run preserved the ordering (11, 8, 4), and the first independent dataset run (LongMemEval-S, 30-question subset) gave 53% understanding, 43% facts, 40% raw RAG, including a documented failure on preference-style questions. Full protocol and limits are in the repo, and the numbers get published either way.</p>
+  <p style="text-align:center;margin:6px 0 30px"><a class="btn" href="/app">Get an API key</a></p>
+
+  <footer>Memline. Every AI already understands you. Questions: hello@memline.app</footer>
+</div>
+</body>
+</html>

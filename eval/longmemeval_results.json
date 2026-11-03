@@ -1,0 +1,782 @@
+[
+ {
+  "question_id": "06878be2",
+  "question_type": "single-session-preference",
+  "question": "Can you suggest some accessories that would complement my current photography setup?",
+  "answer": "The user would prefer suggestions of Sony-compatible accessories or high-quality photography gear that can enhance their photography experience. They may not prefer suggestions of other brands' equipment or low-quality gear.",
+  "systems": {
+   "rag": {
+    "stored": 443,
+    "retrieved": 5,
+    "response": "I do not know what accessories would complement your photography setup. While the context mentions you're looking to upgrade your camera flash for a Sony A7R IV, there is no information about your current accessories or what other equipment you already have. To provide specific recommendations, I would need to know more details about your existing photography gear and your needs.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 52,
+    "retrieved": 5,
+    "response": "I don't have information about your photography setup in the provided context. The context only describes your professional role as a Senior Graphic Designer and PMO professional at Parsons Corporation, which focuses on graphic design, visual communications, and project management expertise.\n\nTo suggest complementary photography accessories, I would need details about your current camera equipment, lenses, and photography style. I'd recommend consulting photography retailers or communities who can assess your specific setup.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 15,
+    "retrieved": 5,
+    "response": "I don't have information about your current photography setup in the provided context. \n\nWhat I do know is that you're learning product photography techniques to prepare for selling candles at the Summer Solstice Fair in June. To give you helpful accessory suggestions, I'd need to know what camera, lenses, lighting equipment, and other gear you already have.\n\nCould you share details about your current photography equipment so I can provide more tailored recommendations?",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "0a995998",
+  "question_type": "multi-session",
+  "question": "How many items of clothing do I need to pick up or return from a store?",
+  "answer": 3,
+  "systems": {
+   "rag": {
+    "stored": 484,
+    "retrieved": 5,
+    "response": "Based on the context provided, you have **1 item** that you need to pick up from a store:\n\n- A pair of boots from Zara that you exchanged on 2/5. You still need to pick up the new pair.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 17,
+    "retrieved": 5,
+    "response": "Based on the context provided, you need to pick up **1 item** from dry cleaning: your navy blue blazer that was taken to dry cleaning a few weeks ago.\n\nThere are no other items mentioned that need to be picked up or returned from a store.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 21,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about clothing items you need to pick up or return from a store.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "0edc2aef",
+  "question_type": "single-session-preference",
+  "question": "Can you suggest a hotel for my upcoming trip to Miami?",
+  "answer": "The user would prefer suggestions of hotels in Miami that offer great views, possibly of the ocean or the city skyline, and have unique features such as a rooftop pool or a hot tub on the balcony. They may not prefer suggestions of basic or budget hotels without these features.",
+  "systems": {
+   "rag": {
+    "stored": 475,
+    "retrieved": 5,
+    "response": "I do not know. The context provided does not contain any information about your upcoming trip to Miami or hotel suggestions for that destination. \n\nThe context mentions you're considering staying at The Edgewater Hotel, but there's no indication that this is in Miami or information about other Miami hotel options.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 26,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about an upcoming trip to Miami or hotel preferences. To suggest a suitable hotel, I would need details about your trip such as travel dates, budget, preferred location in Miami, and amenities you're looking for.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 35,
+    "retrieved": 5,
+    "response": "I don't have any information in your stored context about an upcoming trip to Miami. Your stored travel plans mention a solo trip to Arizona where you want to explore beyond the Grand Canyon, but there's no mention of Miami.\n\nCould you clarify if you're asking about Miami as an addition to your plans, or did you mean to ask about Arizona accommodations?",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "118b2229",
+  "question_type": "single-session-user",
+  "question": "How long is my daily commute to work?",
+  "answer": "45 minutes each way",
+  "systems": {
+   "rag": {
+    "stored": 497,
+    "retrieved": 5,
+    "response": "Based on the context provided, your daily commute to work is **45 minutes each way**. You mentioned listening to audiobooks during your daily commute, which takes 45 minutes each way.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 7,
+    "retrieved": 5,
+    "response": "I do not know. The context provided contains information about quantum computing concepts (superposition, entanglement, quantum gates, algorithms, and applications), but it does not contain any information about your daily commute to work.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 10,
+    "retrieved": 5,
+    "response": "I don't know how long your daily commute to work is. The context provided doesn't contain any information about your current work location, commute time, or transportation arrangements.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "1e043500",
+  "question_type": "single-session-user",
+  "question": "What is the name of the playlist I created on Spotify?",
+  "answer": "Summer Vibes",
+  "systems": {
+   "rag": {
+    "stored": 510,
+    "retrieved": 5,
+    "response": "Based on the retrieved context, the name of the playlist you created on Spotify is **Summer Vibes**. You mentioned it contains chill tracks that are perfect for relaxing or working out.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 27,
+    "retrieved": 5,
+    "response": "I do not know. The context does not contain any information about a Spotify playlist you created.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 25,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about a Spotify playlist you created or its name.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "35a27287",
+  "question_type": "single-session-preference",
+  "question": "Can you recommend some interesting cultural events happening around me this weekend?",
+  "answer": "The user would prefer responses that suggest cultural events where they can practice their language skills, particularly Spanish and French. They would also appreciate if the event has a focus on language learning resources. They would not prefer events that do not provide opportunities for language practice or cultural exchange.",
+  "systems": {
+   "rag": {
+    "stored": 519,
+    "retrieved": 5,
+    "response": "I don't have information about cultural events happening in your area this weekend. The context provided doesn't contain details about specific events, locations, or your current geographical area.\n\nTo find cultural events focusing on French and Spanish languages this weekend, I'd recommend:\n\n1. **Local websites and event listings**: Check local tourism websites, community centers, or cultural organizations in your area\n2. **Social media and meetup platforms**: Look for groups on Facebook, Meetup.com, or Eventbrite that organize language exchange events\n3. **Language schools and cultural institutes**: Contact local French and Spanish language schools or cultural institutes (like Alliance Fran\u00e7aise or Instituto Cervantes) - they often host cultural events\n4. **Ask Juan**: Since Juan is your Spanish tutor, he may know about upcoming Spanish cultural events or language exchange meetups in your area\n\nWould you like suggestions on how to search for these events, or would you prefer tips on finding language exchange partners online?",
+    "correct": true
+   },
+   "facts": {
+    "stored": 26,
+    "retrieved": 5,
+    "response": "I don't know what cultural events are happening around you this weekend. The context provided doesn't contain information about your location or upcoming cultural events in your area.\n\nTo find cultural events near you, I'd recommend checking local event websites, community calendars, or arts organization listings for your city or region.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 22,
+    "retrieved": 5,
+    "response": "I don't have information about your location, so I'm unable to recommend specific cultural events happening near you this weekend.\n\nHowever, based on your interests in multicultural experiences and diverse cuisines, I'd suggest:\n\n1. **Searching locally** for cultural festivals, food markets, or community events in your area\n2. **Checking platforms** like Eventbrite, Meetup, or your city's cultural center website\n3. **Looking for immigrant/diaspora communities** near you\u2014Nigerian, Mozambican, or other cultural groups often host weekend gatherings, markets, or restaurant events\n\nGiven your interest in exploring cuisines beyond your default and your inspiration from that multicultural wedding, weekend cultural events would likely align well with your goals. If you share your city or region, I could give more targeted suggestions!",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "4c36ccef",
+  "question_type": "single-session-assistant",
+  "question": "Can you remind me of the name of the romantic Italian restaurant in Rome you recommended for dinner?",
+  "answer": "Roscioli",
+  "systems": {
+   "rag": {
+    "stored": 521,
+    "retrieved": 5,
+    "response": "Based on the context provided, there are several Italian restaurants I recommended for Rome. However, if you're looking for a particularly romantic option, **La Pergola** would be an excellent choice. It's a fine-dining restaurant located atop the Rome Cavalieri Hotel that offers Italian and International dishes made with the finest ingredients, which provides an elegant and romantic atmosphere.\n\nAlternatively, **Trattoria Da Enzo al 29** in the Trastevere neighborhood is described as cozy and traditional, which could also be romantic for a dinner setting.\n\nCould you clarify which one you were thinking of, or would you like more details about either of these options?",
+    "correct": false
+   },
+   "facts": {
+    "stored": 18,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain information about a romantic Italian restaurant in Rome that was recommended for dinner.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 21,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about a romantic Italian restaurant in Rome or any restaurant recommendation you've made.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "51a45a95",
+  "question_type": "single-session-user",
+  "question": "Where did I redeem a $5 coupon on coffee creamer?",
+  "answer": "Target",
+  "systems": {
+   "rag": {
+    "stored": 529,
+    "retrieved": 5,
+    "response": "Based on the context provided, you redeemed a $5 coupon on coffee creamer last Sunday, but the context does not specify where you redeemed it. I do not know which store or location you used the coupon at.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 18,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about where you redeemed a $5 coupon on coffee creamer.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 23,
+    "retrieved": 5,
+    "response": "I don't know where you redeemed a $5 coupon on coffee creamer. This information is not contained in the context provided about you.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "58bf7951",
+  "question_type": "single-session-user",
+  "question": "What play did I attend at the local community theater?",
+  "answer": "The Glass Menagerie",
+  "systems": {
+   "rag": {
+    "stored": 616,
+    "retrieved": 5,
+    "response": "I do not know what play you attended at the local community theater. The context provided only mentions that you recently went to a play at the local community theater and were impressed by the lead actress's performance, but it does not specify the name or title of the play.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 20,
+    "retrieved": 5,
+    "response": "I do not know. The context provided does not contain any information about plays or attendance at a local community theater.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 16,
+    "retrieved": 5,
+    "response": "I do not know. The context provided does not contain any information about you attending a play at a local community theater.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "6a1eabeb",
+  "question_type": "knowledge-update",
+  "question": "What was my personal best time in the charity 5K run?",
+  "answer": "25 minutes and 50 seconds (or 25:50)",
+  "systems": {
+   "rag": {
+    "stored": 413,
+    "retrieved": 5,
+    "response": "Based on the context provided, your most recent personal best time in a charity 5K run was **27:12**.\n\nHowever, I also see a reference to an earlier personal best time of **25:50** that you were hoping to beat in a previous training session.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 32,
+    "retrieved": 5,
+    "response": "I do not know your personal best time in the charity 5K run. The context provided does not contain information about a charity 5K run or your personal best time in it.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 25,
+    "retrieved": 5,
+    "response": "I don't know your personal best time in a charity 5K run. The context provided doesn't contain information about a charity 5K or any 5K running times. \n\nI can see that you're training for a marathon with a goal to shave 15 minutes off your finish time, but there's no mention of a charity 5K specifically.",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "6aeb4375",
+  "question_type": "knowledge-update",
+  "question": "How many Korean restaurants have I tried in my city?",
+  "answer": "four",
+  "systems": {
+   "rag": {
+    "stored": 468,
+    "retrieved": 5,
+    "response": "Based on the context provided, there are conflicting statements about how many Korean restaurants you've tried:\n\n- In your first message, you mentioned trying **four different ones**\n- In your second message, you mentioned trying **three different ones recently**\n\nThe most recent statement indicates you've tried **three Korean restaurants**.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 55,
+    "retrieved": 5,
+    "response": "I do not know. The context provided does not contain any information about Korean restaurants you have tried in your city.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 21,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain information about Korean restaurants you've tried or your city.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "6d550036",
+  "question_type": "multi-session",
+  "question": "How many projects have I led or am currently leading?",
+  "answer": 2,
+  "systems": {
+   "rag": {
+    "stored": 517,
+    "retrieved": 5,
+    "response": "I do not know how many projects you have led or are currently leading. The context provided does not contain information about your project history or current project leadership responsibilities.\n\nHowever, I can see from the context that you were recently promoted to a senior software engineer position three months ago and are now leading a team of five engineers. If you'd like help creating a Gantt chart or recommending tools for your June product feature launch, I'd be happy to assist with that!",
+    "correct": false
+   },
+   "facts": {
+    "stored": 23,
+    "retrieved": 5,
+    "response": "Based on the provided context, you have led **1 project** - the data analysis team in the Marketing Research class project for a comprehensive market analysis on a new product launch.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 20,
+    "retrieved": 5,
+    "response": "Based on the context provided, I can identify **2 projects** you have led or are currently leading:\n\n1. **A data analysis team in a case competition** - a past leadership experience\n2. **A web design company** - which you are actively planning to start\n\nThere is also mention of **a project connecting 100 rural villages to running water in Nigeria**, but the context notes uncertainty about your exact role and implementation scope, so it's unclear whether you led this or are leading it.\n\nSo the clear answer is **at least 2 projects**, with a possible third depending on your involvement in the Nigeria water access project.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "71017276",
+  "question_type": "temporal-reasoning",
+  "question": "How many weeks ago did I meet up with my aunt and receive the crystal chandelier?",
+  "answer": 4,
+  "systems": {
+   "rag": {
+    "stored": 614,
+    "retrieved": 5,
+    "response": "I do not know. The context provided does not include information about when you received the crystal chandelier from your aunt. It only mentions that you recently acquired it, but no specific date or timeframe is given.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 6,
+    "retrieved": 5,
+    "response": "I do not know. The retrieved context does not contain any information about meeting with your aunt or receiving a crystal chandelier.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 25,
+    "retrieved": 5,
+    "response": "I do not know. The context provided does not contain any information about meeting up with your aunt or receiving a crystal chandelier.",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "7161e7e2",
+  "question_type": "single-session-assistant",
+  "question": "I'm checking our previous chat about the shift rotation sheet for GM social media agents. Can you remind me what was the rotation for Admon on a Sunday?",
+  "answer": "Admon was assigned to the 8 am - 4 pm (Day Shift) on Sundays.",
+  "systems": {
+   "rag": {
+    "stored": 550,
+    "retrieved": 5,
+    "response": "Based on the context provided, on Sunday, Admon was scheduled for the **8 am - 4 pm (Day Shift)**.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 20,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about a shift rotation sheet for GM social media agents or Admon's Sunday rotation. The stored information only covers topics related to the person's aquarium, Athleta store visits, plant-based eating, a planned road trip, and Netflix shows they've watched.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 20,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about a shift rotation sheet for GM social media agents or what Admon's Sunday rotation was. I don't have records of previous conversations about this topic.\n\nIf you need this information, you may want to check your chat history directly or refer to the actual rotation sheet document.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "75832dbd",
+  "question_type": "single-session-preference",
+  "question": "Can you recommend some recent publications or conferences that I might find interesting?",
+  "answer": "The user would prefer suggestions related to recent research papers, articles, or conferences that focus on artificial intelligence in healthcare, particularly those that involve deep learning for medical image analysis. They would not be interested in general AI topics or those unrelated to healthcare.",
+  "systems": {
+   "rag": {
+    "stored": 474,
+    "retrieved": 5,
+    "response": "I do not have information in the provided context about your interests in explainable AI in medical image analysis or any relevant research papers and articles on this topic. \n\nHowever, based on the context provided about your Statement of Purpose for University of Edinburgh, I can see that you have strong interests in:\n\n- **Multi-agent and multi-modal reinforcement learning**\n- **Autonomous systems and robotics**\n- **AI for environmental sustainability**\n- **Computer vision and NLP**\n\nIf you're interested in learning more about these specific areas, I'd recommend looking into publications from top-tier conferences you mentioned in your statement, such as:\n- **NeurIPS**\n- **CVPR** (Computer Vision and Pattern Recognition)\n- **ICML**\n- **ICLR**\n- **ICCV**\n\nYou could also follow research from **Dr. Stefano V Aldrich at University of Edinburgh**, whose work in multi-agent and multimodal reinforcement learning aligns with your interests.\n\nTo get specific recommendations on explainable AI in medical image analysis, you would need to provide that context or search academic databases like arXiv, Google Scholar, or your university's library resources.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 25,
+    "retrieved": 5,
+    "response": "Based on the context provided, I can see that you work in deep learning for medical image analysis. However, the context does not contain specific information about recent publications or conferences in your field that I could recommend to you.\n\nTo give you a proper recommendation, I would need information about which specific conferences or publications you've found valuable in the past, or details about your particular research interests within medical image analysis. I'd suggest checking resources like:\n\n- Major conferences in your field (MICCAI, ISBI, etc.)\n- Recent arXiv papers in medical imaging\n- Your institution's research databases\n\nBut I don't have these specific details in your stored information to provide a personalized recommendation.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 22,
+    "retrieved": 5,
+    "response": "I don't have access to your stored information about specific clinical applications, research domains, or which neurological conditions you're targeting with your FNI work. This context note indicates uncertainty about your particular research goals.\n\nTo give you useful recommendations, I'd need to know:\n\n1. **Your primary application focus** \u2014 Are you working toward:\n   - Motor restoration (paralysis, stroke recovery)?\n   - Sensory restoration (vision, touch, proprioception)?\n   - Pain management or neuromodulation?\n   - Brain-computer interfaces for communication?\n   - Something else?\n\n2. **Your technical emphasis** \u2014 Are you most interested in:\n   - Ultrasound-based stimulation advances?\n   - Optogenetic implementations?\n   - Piezoelectric transducer design?\n   - Signal processing and decoding?\n\n3. **Your career stage** \u2014 Are you looking for foundational work, cutting-edge recent papers, or specific venue recommendations?\n\nOnce you clarify these, I can point you toward relevant conferences (like IEEE EMBS, Society for Neuroscience, specialized neurotech venues) and recent publications in your specific niche, rather than giving you the broad survey you'd find through a generic search.",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "830ce83f",
+  "question_type": "knowledge-update",
+  "question": "Where did Rachel move to after her recent relocation?",
+  "answer": "the suburbs",
+  "systems": {
+   "rag": {
+    "stored": 511,
+    "retrieved": 5,
+    "response": "I do not know where Rachel moved to based on the provided context. While the context mentions that you plan to visit \"Rachel in Chicago,\" it does not specify whether this is a recent relocation or provide any information about where she moved from or to.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 4,
+    "retrieved": 4,
+    "response": "I do not know. The retrieved context does not contain any information about Rachel or a recent relocation.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 16,
+    "retrieved": 5,
+    "response": "I do not know where Rachel moved to after her recent relocation. The context provided does not contain any information about a relocation or a destination address.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "852ce960",
+  "question_type": "knowledge-update",
+  "question": "What was the amount I was pre-approved for when I got my mortgage from Wells Fargo?",
+  "answer": "$400,000",
+  "systems": {
+   "rag": {
+    "stored": 396,
+    "retrieved": 5,
+    "response": "Based on the context provided, there are two different pre-approval amounts mentioned:\n\n1. **$350,000** - from your first message about buying a $325,000 house\n2. **$400,000** - from your second message about moving into your new home\n\nThe most recent and specific pre-approval amount mentioned is **$350,000 from Wells Fargo** for the $325,000 house purchase.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 29,
+    "retrieved": 5,
+    "response": "I do not know. The context provided does not contain any information about a mortgage pre-approval amount from Wells Fargo.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 36,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about your mortgage pre-approval amount from Wells Fargo or any other financial details about your personal loans.",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "89527b6b",
+  "question_type": "single-session-assistant",
+  "question": "I'm going back to our previous conversation about the children's book on dinosaurs. Can you remind me what color was the scaly body of the Plesiosaur in the image?",
+  "answer": "The Plesiosaur had a blue scaly body.",
+  "systems": {
+   "rag": {
+    "stored": 467,
+    "retrieved": 5,
+    "response": "Based on the context provided, the Plesiosaur in the children's book had a **blue scaly body**.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 37,
+    "retrieved": 5,
+    "response": "I don't know. The context from your stored information does not contain any details about a children's book on dinosaurs or a Plesiosaur image. There is no record of a previous conversation about this topic in the available information.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 24,
+    "retrieved": 5,
+    "response": "I don't have access to any previous conversations we may have had. Each conversation with me starts fresh\u2014I can't retrieve or remember details from past interactions, including any discussion about a children's dinosaur book or an image of a Plesiosaur.\n\nIf you'd like to continue that conversation, you're welcome to:\n- Describe the book or image again, and I can help you discuss it\n- Share the relevant details, and I can assist from there\n\nIs there something specific about that book or image you'd like to explore?",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "8a2466db",
+  "question_type": "single-session-preference",
+  "question": "Can you recommend some resources where I can learn more about video editing?",
+  "answer": "The user would prefer responses that suggest resources specifically tailored to Adobe Premiere Pro, especially those that delve into its advanced settings. They might not prefer general video editing resources or resources related to other video editing software.",
+  "systems": {
+   "rag": {
+    "stored": 508,
+    "retrieved": 5,
+    "response": "Based on the context, here are some resources recommended for learning more about video editing with Adobe Premiere Pro:\n\n* Adobe Premiere Pro's official documentation and tutorials\n* YouTube channels like Premiere Bro, Video Copilot, and Adobe Creative Cloud\n* Online courses on platforms like Udemy, LinkedIn Learning, and Skillshare\n* Premiere Pro communities and forums, such as Reddit's r/premierepro and Adobe's Premiere Pro forum\n\nThese resources can help you learn both the fundamentals and advanced settings for video editing in Premiere Pro.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 26,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about your interest in video editing or resources related to it. \n\nHowever, I can see you recently purchased a Canon 24-70mm lens in February, which suggests you're interested in photography. If you're looking to expand into video editing, you might want to explore resources that complement your existing photography equipment and interests.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 36,
+    "retrieved": 5,
+    "response": "Based on your context, here are some resources tailored to how you learn best:\n\n**Structured, Tutorial-Based Platforms:**\n- **Adobe Premiere Pro Official Tutorials** \u2013 Since you already use Premiere Pro, Adobe's step-by-step guides are directly applicable\n- **LinkedIn Learning** \u2013 Offers numbered, structured courses on video editing with clear progression\n- **Skillshare** \u2013 Good for visual, project-based learning with detailed breakdowns\n\n**YouTube Channels (for visual learners):**\n- **Film Riot** \u2013 Detailed tutorials with specific techniques broken down step-by-step\n- **Casey Frazier** \u2013 Premiere Pro focused with methodical walkthroughs\n- **Potato Jet** \u2013 Tech and creative equipment reviews (aligns with your investment in gear)\n\n**For Your Multi-Creative Approach:**\n- **Adobe Creative Cloud Documentation** \u2013 Integrates Premiere Pro with your photography and design work\n- **Lynda.com** \u2013 Comprehensive structured courses across all Adobe tools\n\n**Given your preference for efficiency**, I'd recommend starting with **Adobe's official tutorials** (fastest path for your specific software) combined with **Film Riot** for broader technique exploration.\n\nWould you like recommendations tailored to a specific editing challenge you're working on\u2014perhaps integrating your photography or music projects?",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "945e3d21",
+  "question_type": "knowledge-update",
+  "question": "How often do I attend yoga classes to help with my anxiety?",
+  "answer": "Three times a week.",
+  "systems": {
+   "rag": {
+    "stored": 489,
+    "retrieved": 5,
+    "response": "Based on the information you've provided, you attend yoga classes **three times a week**. You've mentioned that you're more focused on days when you attend yoga classes, as it really helps you clear your head.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 30,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about your yoga class attendance or anxiety management practices.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 32,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain information about your yoga practice or how often you attend classes.",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "b46e15ed",
+  "question_type": "temporal-reasoning",
+  "question": "How many months have passed since I participated in two charity events in a row, on consecutive days?",
+  "answer": 2,
+  "systems": {
+   "rag": {
+    "stored": 478,
+    "retrieved": 5,
+    "response": "I do not know. The context provided does not contain information about you participating in two charity events in a row on consecutive days, so I cannot determine how many months have passed since that occurred.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 33,
+    "retrieved": 5,
+    "response": "I do not know. The context only mentions participation in one charity event (the 24-Hour Bike Ride). There is no information about participating in two charity events on consecutive days.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 28,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain information about you participating in two charity events on consecutive days, so I cannot determine how many months have passed since that occurred.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "b5ef892d",
+  "question_type": "multi-session",
+  "question": "How many days did I spend on camping trips in the United States this year?",
+  "answer": "8 days.",
+  "systems": {
+   "rag": {
+    "stored": 516,
+    "retrieved": 5,
+    "response": "Based on the context provided, I can identify the following camping trips you took in the United States this year:\n\n1. A 7-day family road trip to Utah in February (with driving and hiking, but not camping)\n2. A 3-day solo camping trip to Big Sur in early April\n\nHowever, I should note that the February trip to Utah is described as a \"road trip\" with driving and hiking, but specifically states \"not camping for this time.\" So the only camping trip mentioned is the 3-day solo camping trip to Big Sur in early April.\n\nTherefore, based on the information provided, you spent **3 days on a camping trip** in the United States this year (the Big Sur trip in early April).",
+    "correct": false
+   },
+   "facts": {
+    "stored": 61,
+    "retrieved": 5,
+    "response": "Based on the context provided, you spent **5 days** on a camping trip in the United States this year - your 5-day camping trip to Yellowstone National Park last month.\n\nNote: Your 7-day family road trip to Utah in February did not include camping, so it doesn't count toward camping trip days.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 23,
+    "retrieved": 5,
+    "response": "Based on the context provided, I can account for **5 days** of camping trips in the United States this year\u2014your 5-day Yellowstone camping trip that took place last month (March 2023).\n\nThe 7-day February Utah road trip is also mentioned, but the context specifies it as a \"road trip with hiking\" rather than explicitly confirming it was a camping trip, so I'm not including those days in this count.\n\nIf the Utah trip also involved camping, the total would be 12 days, but I cannot confirm that from the information provided.",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "c4f10528",
+  "question_type": "single-session-assistant",
+  "question": "I'm planning to visit Bandung again and I was wondering if you could remind me of the name of that restaurant in Cihampelas Walk that serves a great Nasi Goreng?",
+  "answer": "Miss Bee Providore",
+  "systems": {
+   "rag": {
+    "stored": 485,
+    "retrieved": 5,
+    "response": "I don't know the name of a specific restaurant in Cihampelas Walk that you visited for Nasi Goreng. \n\nBased on the context provided, I can see that restaurants in the Cihampelas Walk area were mentioned (including Miss Bee Providore, Bakery & Co, Raa Cha Suki & BBQ, Sumoboo, and Holycow! Steakhouse), but none of these were specifically noted as serving Nasi Goreng or as a place you had previously visited for that dish.\n\nIf you're trying to remember which restaurant it was, you might want to check your past travel notes, photos, or messages with friends who may have been with you.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 28,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about restaurants in Bandung or Cihampelas Walk.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 36,
+    "retrieved": 5,
+    "response": "I don't have any information in the stored context about a restaurant you've visited in Cihampelas Walk or details about a Nasi Goreng restaurant there. The context provided doesn't include your travel history or dining experiences in Bandung.\n\nTo help you find this restaurant, you might consider:\n- Checking your past messages, photos, or credit card statements from that trip\n- Reviewing Google Maps history or saved places\n- Searching your email for booking confirmations or reviews you may have written\n\nDo you remember any other details about the restaurant (like approximate price range, specific type of cuisine beyond Nasi Goreng, or when you visited) that might help narrow it down?",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "e47becba",
+  "question_type": "single-session-user",
+  "question": "What degree did I graduate with?",
+  "answer": "Business Administration",
+  "systems": {
+   "rag": {
+    "stored": 550,
+    "retrieved": 5,
+    "response": "Based on the context provided, you graduated with a degree in **Business Administration**.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 14,
+    "retrieved": 5,
+    "response": "I do not know. The provided context does not contain information about any degree you graduated with.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 23,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain information about your educational background or what degree you graduated with.",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "e831120c",
+  "question_type": "multi-session",
+  "question": "How many weeks did it take me to watch all the Marvel Cinematic Universe movies and the main Star Wars films?",
+  "answer": "3.5 weeks",
+  "systems": {
+   "rag": {
+    "stored": 481,
+    "retrieved": 5,
+    "response": "Based on the context provided, you watched:\n\n- All the main Star Wars films in **a week and a half**\n- All 22 Marvel Cinematic Universe movies in **two weeks**\n\nSo in total, that's approximately **3.5 weeks** (or about 3 weeks and 5 days) to watch both the Star Wars marathon and the MCU binge.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 34,
+    "retrieved": 5,
+    "response": "Based on the context:\n- You watched all the main Star Wars films in a week and a half\n- You watched all 22 Marvel Cinematic Universe movies in two weeks\n\nIn total, it took you **3.5 weeks** (or 3 weeks and a half) to watch both.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 24,
+    "retrieved": 5,
+    "response": "Based on the context provided, I don't have a specific timeframe for completing both the MCU and Star Wars franchises together.\n\nWhat I can tell you is:\n- You watched **22 MCU films in two weeks**\n- You completed **full Star Wars franchises in comparable timeframes** (meaning roughly two weeks as well)\n\nHowever, the context doesn't specify whether you watched these sequentially (one after the other) or overlapping, so I cannot give you a precise total number of weeks for completing both franchises together.",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "e9327a54",
+  "question_type": "single-session-assistant",
+  "question": "I'm planning to revisit Orlando. I was wondering if you could remind me of that unique dessert shop with the giant milkshakes we talked about last time?",
+  "answer": "The Sugar Factory at Icon Park.",
+  "systems": {
+   "rag": {
+    "stored": 533,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about a dessert shop with giant milkshakes in Orlando or any previous conversation about it. I can only answer based on the information available in your stored context.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 20,
+    "retrieved": 5,
+    "response": "I don't know. The context provided doesn't contain any information about a dessert shop with giant milkshakes in Orlando or any previous conversation about it.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 21,
+    "retrieved": 5,
+    "response": "I don't have any information about a previous conversation with you regarding a dessert shop with giant milkshakes in Orlando. The context available to me doesn't contain details about your past visits to Orlando or discussions about specific restaurants or dessert shops there.\n\nTo help you find this place, you might want to:\n- Check your chat history or previous messages if they're saved\n- Search your email for any recommendations or confirmations\n- Try searching for \"Orlando giant milkshakes\" or similar terms online\n\nI'd be happy to help you research dessert shops in Orlando if you'd like to explore current options!",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "gpt4_59149c77",
+  "question_type": "temporal-reasoning",
+  "question": "How many days passed between my visit to the Museum of Modern Art (MoMA) and the 'Ancient Civilizations' exhibit at the Metropolitan Museum of Art?",
+  "answer": "7 days. 8 days (including the last day) is also acceptable.",
+  "systems": {
+   "rag": {
+    "stored": 484,
+    "retrieved": 5,
+    "response": "I do not know the specific dates of your visits to these two museums based on the provided context. While the context mentions that you attended the \"Ancient Civilizations\" exhibit at the Metropolitan Museum of Art \"today\" (which would be 2023/02/01), it does not specify when you visited the Museum of Modern Art for the guided tour on 20th-century modern art movements. Therefore, I cannot calculate the number of days between these two visits.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 123,
+    "retrieved": 5,
+    "response": "I do not know. The context does not contain any information about a visit to an \"Ancient Civilizations\" exhibit at the Metropolitan Museum of Art. I only have information about your guided tour at the Museum of Modern Art on 2023/01/08, which focused on 20th-century modern art movements.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 31,
+    "retrieved": 5,
+    "response": "I don't know. The context provided does not contain specific dates for your visits to MoMA or the Metropolitan Museum of Art's 'Ancient Civilizations' exhibit. While the context indicates you've visited art museums multiple times and are interested in modern art installations with recycled materials, it doesn't include the particular visit dates needed to calculate the number of days between these two trips.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "gpt4_59c863d7",
+  "question_type": "multi-session",
+  "question": "How many model kits have I worked on or bought?",
+  "answer": "I have worked on or bought five model kits. The scales of the models are: Revell F-15 Eagle (scale not mentioned), Tamiya 1/48 scale Spitfire Mk.V, 1/16 scale German Tiger I tank, 1/72 scale B-29 bomber, and 1/24 scale '69 Camaro.",
+  "systems": {
+   "rag": {
+    "stored": 481,
+    "retrieved": 5,
+    "response": "Based on the context provided, I can only identify **one** model kit that you have worked on: the **Tamiya 1/48 scale Spitfire Mk.V**, which you recently finished.\n\nThe context does not provide information about other model kits you may have bought or worked on, so I cannot give you a complete total.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 21,
+    "retrieved": 5,
+    "response": "Based on the context provided, I can only confirm that you picked up **1 model kit** - a Revell F-15 Eagle model kit at a hobby store in late April.\n\nHowever, the context only mentions this one instance, so I cannot determine if you've worked on or bought any other model kits beyond this one.",
+    "correct": false
+   },
+   "understanding": {
+    "stored": 27,
+    "retrieved": 5,
+    "response": "Based on the context provided, I can confirm you've **worked on at least 3 model kits**:\n\n1. **Revell F-15 Eagle** (completed)\n2. **1/72 B-29** (in progress)\n3. **1/24 Camaro** (in progress)\n\nHowever, the context only specifically mentions these three kits. You may have worked on or purchased additional kits beyond what's documented here, but I don't have that information.",
+    "correct": false
+   }
+  }
+ },
+ {
+  "question_id": "gpt4_f49edff3",
+  "question_type": "temporal-reasoning",
+  "question": "Which three events happened in the order from first to last: the day I helped my friend prepare the nursery, the day I helped my cousin pick out stuff for her baby shower, and the day I ordered a customized phone case for my friend's birthday?",
+  "answer": "First, I helped my friend prepare the nursery, then I helped my cousin pick out stuff for her baby shower, and lastly, I ordered a customized phone case for my friend's birthday.",
+  "systems": {
+   "rag": {
+    "stored": 498,
+    "retrieved": 5,
+    "response": "Based on the context provided, I cannot determine the exact chronological order of these three events because the context does not include specific dates for when each event occurred.\n\nThe context only mentions:\n- You ordered a customized phone case for your friend's birthday \"today\" (which would be 2023/03/22)\n- You helped your cousin pick out baby shower items at Target (no specific date given)\n- You helped your friend prepare a nursery on \"an entire Sunday afternoon\" (no specific date given)\n\nWithout dates for the baby shower and nursery preparation events, I cannot accurately order all three events from first to last.",
+    "correct": false
+   },
+   "facts": {
+    "stored": 20,
+    "retrieved": 5,
+    "response": "I do not know the order of these three events. The context provided does not contain any information about when you helped your friend prepare the nursery, helped your cousin with her baby shower, or ordered a customized phone case for your friend's birthday.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 23,
+    "retrieved": 5,
+    "response": "I don't have information in the provided context about any of these three events: helping a friend prepare a nursery, helping a cousin with a baby shower, or ordering a customized phone case for a friend's birthday.\n\nThe context provided focuses on your Master's degree completion, friendship with Rachel in Shimokitazawa, work on a partnership proposal with Archis Academy, and mentions of trips and purchases, but does not contain details about the specific events you're asking about or their chronological order.",
+    "correct": true
+   }
+  }
+ },
+ {
+  "question_id": "gpt4_fa19884c",
+  "question_type": "temporal-reasoning",
+  "question": "How many days passed between the day I started playing along to my favorite songs on my old keyboard and the day I discovered a bluegrass band?",
+  "answer": "6 days. 7 days (including the last day) is also acceptable.",
+  "systems": {
+   "rag": {
+    "stored": 507,
+    "retrieved": 5,
+    "response": "I do not know. The context does not provide specific dates for when you started playing along to your favorite songs on your old keyboard or when you discovered the bluegrass band. While the current date is provided as 2023/04/05, the context only mentions these events in relative terms without specifying the exact dates they occurred.",
+    "correct": true
+   },
+   "facts": {
+    "stored": 23,
+    "retrieved": 5,
+    "response": "I don't know the answer to this question. The context provided does not contain any information about when you started playing keyboard or when you discovered a bluegrass band. The context only mentions that you've been playing a Fender CD-60S guitar for three weeks, but nothing about keyboard playing or discovering a bluegrass band.",
+    "correct": true
+   },
+   "understanding": {
+    "stored": 35,
+    "retrieved": 5,
+    "response": "I don't know. The context provided does not contain information about when you started playing along to your favorite songs on an old keyboard or when you discovered a bluegrass band. While the context mentions you're learning guitar on a Fender CD-60S, it doesn't include these specific events or dates.",
+    "correct": true
+   }
+  }
+ }
+]

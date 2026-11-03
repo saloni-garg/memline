@@ -1,0 +1,625 @@
+[
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 0.",
+  "valid_from": "2025-01-001T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 3.",
+  "valid_from": "2025-01-004T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 6.",
+  "valid_from": "2025-01-007T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 9.",
+  "valid_from": "2025-01-010T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User prefers Vim for editing code",
+  "valid_from": "2025-01-05T09:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User's favorite coffee is an oat milk latte.",
+  "valid_from": "2025-01-11T08:30:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 1.",
+  "valid_from": "2025-02-002T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 4.",
+  "valid_from": "2025-02-005T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 7.",
+  "valid_from": "2025-02-008T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 10.",
+  "valid_from": "2025-02-011T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User works at Northwind Traders.",
+  "valid_from": "2025-02-10T09:00:00Z",
+  "valid_to": "2026-01-15T09:00:00Z",
+  "migration": "superseded"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is a support engineer.",
+  "valid_from": "2025-02-10T09:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 2.",
+  "valid_from": "2025-03-003T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 5.",
+  "valid_from": "2025-03-006T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 8.",
+  "valid_from": "2025-03-009T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User is working on Project Falcon milestone 11.",
+  "valid_from": "2025-03-012T14:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User lives in Portland.",
+  "valid_from": "2025-03-04T12:00:00Z",
+  "valid_to": "2025-11-18T12:00:00Z",
+  "migration": "superseded"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User moved to Austin.",
+  "valid_from": "2025-11-18T12:00:00Z",
+  "valid_to": "2026-06-22T12:00:00Z",
+  "migration": "superseded"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 0 about billing exports.",
+  "valid_from": "2026-01-101T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 27 about billing exports.",
+  "valid_from": "2026-01-101T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 9 about billing exports.",
+  "valid_from": "2026-01-110T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 36 about billing exports.",
+  "valid_from": "2026-01-110T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 18 about billing exports.",
+  "valid_from": "2026-01-119T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 45 about billing exports.",
+  "valid_from": "2026-01-119T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User works at Globex.",
+  "valid_from": "2026-01-15T09:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User's manager is Priya.",
+  "valid_from": "2026-02-01T09:00:00Z",
+  "valid_to": "2026-03-01T09:00:00Z",
+  "migration": "superseded"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 1 about billing exports.",
+  "valid_from": "2026-02-102T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 28 about billing exports.",
+  "valid_from": "2026-02-102T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 10 about billing exports.",
+  "valid_from": "2026-02-111T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 37 about billing exports.",
+  "valid_from": "2026-02-111T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 19 about billing exports.",
+  "valid_from": "2026-02-120T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User's manager is Tom.",
+  "valid_from": "2026-03-01T09:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 2 about billing exports.",
+  "valid_from": "2026-03-103T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 29 about billing exports.",
+  "valid_from": "2026-03-103T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 11 about billing exports.",
+  "valid_from": "2026-03-112T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 38 about billing exports.",
+  "valid_from": "2026-03-112T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 20 about billing exports.",
+  "valid_from": "2026-03-121T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 3 about billing exports.",
+  "valid_from": "2026-04-104T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 30 about billing exports.",
+  "valid_from": "2026-04-104T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 12 about billing exports.",
+  "valid_from": "2026-04-113T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 39 about billing exports.",
+  "valid_from": "2026-04-113T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 21 about billing exports.",
+  "valid_from": "2026-04-122T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 4 about billing exports.",
+  "valid_from": "2026-05-105T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 31 about billing exports.",
+  "valid_from": "2026-05-105T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 13 about billing exports.",
+  "valid_from": "2026-05-114T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 40 about billing exports.",
+  "valid_from": "2026-05-114T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 22 about billing exports.",
+  "valid_from": "2026-05-123T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 5 about billing exports.",
+  "valid_from": "2026-06-106T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 32 about billing exports.",
+  "valid_from": "2026-06-106T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 14 about billing exports.",
+  "valid_from": "2026-06-115T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 41 about billing exports.",
+  "valid_from": "2026-06-115T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 23 about billing exports.",
+  "valid_from": "2026-06-124T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User lives in Denver.",
+  "valid_from": "2026-06-22T12:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 6 about billing exports.",
+  "valid_from": "2026-07-107T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 33 about billing exports.",
+  "valid_from": "2026-07-107T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 15 about billing exports.",
+  "valid_from": "2026-07-116T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 42 about billing exports.",
+  "valid_from": "2026-07-116T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 24 about billing exports.",
+  "valid_from": "2026-07-125T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 7 about billing exports.",
+  "valid_from": "2026-08-108T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 34 about billing exports.",
+  "valid_from": "2026-08-108T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 16 about billing exports.",
+  "valid_from": "2026-08-117T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 43 about billing exports.",
+  "valid_from": "2026-08-117T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 25 about billing exports.",
+  "valid_from": "2026-08-126T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 8 about billing exports.",
+  "valid_from": "2026-09-109T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 35 about billing exports.",
+  "valid_from": "2026-09-109T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 17 about billing exports.",
+  "valid_from": "2026-09-118T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 44 about billing exports.",
+  "valid_from": "2026-09-118T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-42",
+  "body": "User discussed ticket topic number 26 about billing exports.",
+  "valid_from": "2026-09-127T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User lives in Chicago.",
+  "valid_from": "2025-08-01T10:00:00Z",
+  "valid_to": "2026-04-01T10:00:00Z",
+  "migration": "superseded"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User is a product designer.",
+  "valid_from": "2025-08-01T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User moved to Seattle.",
+  "valid_from": "2026-04-01T10:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 0 with chickpeas.",
+  "valid_from": "2026-05-01T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 1 with chickpeas.",
+  "valid_from": "2026-05-02T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 2 with chickpeas.",
+  "valid_from": "2026-05-03T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 3 with chickpeas.",
+  "valid_from": "2026-05-04T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 4 with chickpeas.",
+  "valid_from": "2026-05-05T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 5 with chickpeas.",
+  "valid_from": "2026-05-06T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 6 with chickpeas.",
+  "valid_from": "2026-05-07T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 7 with chickpeas.",
+  "valid_from": "2026-05-08T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 8 with chickpeas.",
+  "valid_from": "2026-05-09T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 9 with chickpeas.",
+  "valid_from": "2026-05-10T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 10 with chickpeas.",
+  "valid_from": "2026-05-11T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 11 with chickpeas.",
+  "valid_from": "2026-05-12T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 12 with chickpeas.",
+  "valid_from": "2026-05-13T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 13 with chickpeas.",
+  "valid_from": "2026-05-14T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 14 with chickpeas.",
+  "valid_from": "2026-05-15T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 15 with chickpeas.",
+  "valid_from": "2026-05-16T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 16 with chickpeas.",
+  "valid_from": "2026-05-17T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ },
+ {
+  "user_id": "user-7",
+  "body": "User asked about recipe variation 17 with chickpeas.",
+  "valid_from": "2026-05-18T19:00:00Z",
+  "valid_to": null,
+  "migration": "current"
+ }
+]
